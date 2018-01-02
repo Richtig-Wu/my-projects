@@ -16,7 +16,6 @@
   </div>
 </template>
 
-
 <script>
 
 export default {
@@ -32,7 +31,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .guanggao{
-  padding: 0.5em;
+  padding: 0.3em 0.5em;
 }
 .one-left,.one-sild,.one-right{
   float: left;
@@ -41,17 +40,17 @@ export default {
   float: left;
 }
 .one-left{
-  width: 32%;
+  width: 31%;
 }
 .one-left img{
   width: 100%;
 }
 .one-sild,.one-right{
-  width: 33%;
-  padding-left: 1%;
-  padding-bottom: 2%;
+  width: 32%;
+  padding-left: 2%;
 }
 .one-sild img,.one-right img{
   width: 100%;
+  padding-bottom: 7%;
 }
 </style>

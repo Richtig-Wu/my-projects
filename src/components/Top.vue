@@ -1,14 +1,15 @@
 <template>
   <div>
-    <select class="sel" name="">
+    <select class="sel" name="" v-show="$route.path =='/' ? true : false"> 
       <option value="">城市</option>
       <option value="广州">广州</option>
       <option value="上海">上海</option>
       <option value="福建">福建</option>
       <option value="厦门">厦门</option>
     </select>
-    <i class="iconfont icon-fangdajing"></i>
-    <div class="top">{{title}}</div>
+    <i class="iconfont icon-fangdajing" v-show="$route.path =='/' ? true : false"></i>
+    <span v-show="$route.path =='/cart' ? true : false">编辑</span>
+    <div class="top" >{{message}}</div>
   </div>
 </template>
 
@@ -18,10 +19,11 @@
   export default {
     data() {
       return {
-        title:"生活一家"
+          // title:"生活一家",
       }
+      
     },
-
+    props:['message'],
   }
 
 </script>
@@ -58,7 +60,7 @@ option{
   background: rgb(288,188,14);
   text-align: center;
 }
-i{
+i,span{
   font-size: 1.8em;
   position: absolute;
   top: 14px;
