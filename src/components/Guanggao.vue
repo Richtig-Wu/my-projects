@@ -2,7 +2,7 @@
 
 <template>
   <div class="guanggao">
-    <div class="one-left">
+    <!-- <div class="one-left">
       <img src="../assets/g1.jpg" alt="">
     </div>
     <div class="one-sild">
@@ -12,7 +12,7 @@
     <div class="one-right">
       <img src="../assets/g3.jpg" alt="">
       <img src="../assets/g5.jpg" alt="">
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .guanggao{
-  padding: 0.3em 0.5em;
+  /* padding: 0.3em 0.5em; */
 }
 .one-left,.one-sild,.one-right{
   float: left;

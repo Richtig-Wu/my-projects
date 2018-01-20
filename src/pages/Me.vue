@@ -1,6 +1,7 @@
 <template>
     <div>
-      <Top message="我的"></Top>
+      <Top message="在线查询"></Top>
+      <!-- <My/> -->
       <Fot></Fot>
     </div>
 </template>
@@ -11,6 +12,8 @@
 import Top from "@/components/Top";
 // 底部导航
 import Fot from "@/components/Foot";
+// Me内容
+import My from "@/components/My";
 
 export default {
   data() {
@@ -18,7 +21,8 @@ export default {
   },
   components: {
     Top: Top,
-    Fot: Fot
+    Fot: Fot,
+    My:My
   }
 };
 </script>

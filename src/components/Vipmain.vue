@@ -109,6 +109,7 @@ export default {
   background: #f2f2f2;
   margin-top: -1%;
   padding-bottom: 18%;
+  z-index: -3;
 }
 .vip {
   padding: 3%;
@@ -131,7 +132,7 @@ del,
 }
 .vtext {
   padding: 0 4.5%;
-  font-size: 0.9em;
+  font-size: 0.8em;
   background: #fff;
   margin-bottom: 2%;
 }

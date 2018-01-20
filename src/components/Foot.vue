@@ -16,36 +16,38 @@
 
 
 <script>
-
-  export default {
-      data(){
-          return {
-              foots: [
-                    {"icfont":"iconfont icon-zhengtaofangzi","name":"首页","path":"/"},
-                    {"icfont":"iconfont icon-liwuhe","name":"会员杂锦","path":"/vip"},
-                    {"icfont":"iconfont icon-fenlei","name":"分类","path":"/sort"},
-                    {"icfont":"iconfont icon-icon","name":"购物车","path":"/cart"},
-                    {"icfont":"iconfont icon-geren-copy-copy-copy" ,"name":"我的","path":"/me"}
-                 ]
-                }
-          },
-      }
-  
+export default {
+  data() {
+    return {
+      foots: [
+        { icfont: "iconfont icon-zhengtaofangzi", name: "首页", path: "/" },
+        { icfont: "iconfont icon-liwuhe", name: "本院动态", path: "/vip" },
+        { icfont: "iconfont icon-fenlei", name: "健康资讯", path: "/sort" },
+        { icfont: "iconfont icon-icon", name: "医院公告", path: "/cart" },
+        {
+          icfont: "iconfont icon-geren-copy-copy-copy",
+          name: "在线查询",
+          path: "/me"
+        }
+      ]
+    };
+  }
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-ul{
-    margin: 0;
-    list-style: none;
+ul {
+  margin: 0;
+  list-style: none;
 }
-a{
-    text-decoration: none;
-     color:#666;
+a {
+  text-decoration: none;
+  color: #666;
 }
 /*  清除浮动css */
 .clearfix:after {
@@ -57,39 +59,35 @@ a{
 .clearfix {
   zoom: 1;
 }
-.foots{
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom:-1.1%;
-    
+.foots {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: -1.1%;
+  border-top: 1px solid #e9e9e9;
 }
-.foot{
-    background: #f1eded;
-    padding:2.5% ;
-    
+.foot {
+  background: #fdfbfb;
+  padding: 2.5%;
 }
-.foot ul{
-   
+.foot ul {
 }
-.foot li{
-    
-    width: 20%;
-    float: left;
-    text-align: center;
+.foot li {
+  width: 20%;
+  float: left;
+  text-align: center;
 }
-i{
-    font-size: 1.8em;
-    font-weight: bold;
+i {
+  font-size: 1.8em;
+  font-weight: 500;
 }
-span{
-    font-size: 0.9em;
-    font-weight: bold;
+span {
+  font-size: 0.9em;
+  font-weight: 500;
 }
 /* 字体图标 */
 
-
 a.router-link-active {
-    color:rgb(253, 193, 63);
+  color: rgb(253, 193, 63);
 }
 </style>

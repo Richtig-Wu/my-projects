@@ -1,70 +1,143 @@
 <template>
   <div>
-    <select class="sel" name="" v-show="$route.path =='/' ? true : false"> 
-      <option value="">城市</option>
-      <option value="广州">广州</option>
-      <option value="上海">上海</option>
-      <option value="福建">福建</option>
-      <option value="厦门">厦门</option>
-    </select>
-    <i class="iconfont icon-fangdajing" v-show="$route.path =='/' ? true : false"></i>
-    <span v-show="$route.path =='/cart' ? true : false">编辑</span>
-    <div class="top" >{{message}}</div>
+
+    <nav class="navbar navbar-default top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <!-- 导航按钮  -->
+      <button type="button" class="navbar-toggle collapsed btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{message}}</a>
+    </div>
+
+    <div class="collapse navbar-collapse mynav" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav mynav-s">
+        <li><a href="#">首页</a></li>
+        <li class="dropdown" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">医院概况<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">专家团队 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">党政建设<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教学教研<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">就医指南<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">合作交流<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">本院动态</a></li>
+            <li><a href="#">健康资讯</a></li>
+            <li><a href="#">医院公告</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li><a href="#">在线咨询</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
   </div>
 </template>
 
 
 <script>
-
-  export default {
-    data() {
-      return {
-          // title:"生活一家",
-      }
-      
-    },
-    props:['message'],
-  }
-
+export default {
+  data() {
+    return {
+      navs:[
+        // {title:"医院概况"},
+        // {title:"新闻中心"}
+      ]
+    };
+  },
+  props: ["message"]
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-select{
-  /*清除select默认边框*/
-  appearance:none;
-  width: auto;
-  padding: 0 0.5%;
+.top{
+  background: #009ed9;
+  color: #fff;
+}
+.mynav{
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+
+}
+.navbar{
   margin: 0;
 }
-
-.top{
-  height: 60px;
-  display: block;
-  background: rgb(288,188,14);
-  line-height: 60px;
+.navbar-brand{
   color: #fff;
-  text-align: center;
-  font-size: 24px;
 }
-.sel{
-  position: absolute;
-  border: none;
-  background: none;
-  outline: none;
-  top: 20px;
-  left: 14px;
-  color: #fff;
-  font-size: 22px;
+/* 导航按钮  */
+.btn {
+  width: 3.5em;
+  height: 2.5em;
+  outline:none;
 }
-option{
-  background: rgb(288,188,14);
-  text-align: center;
+.navbar-toggle:focus{
+  background: #fff;
 }
-i,span{
-  font-size: 1.8em;
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  color: #fff;
+.foots{
+  font-size: 1em;
 }
 </style>
+        

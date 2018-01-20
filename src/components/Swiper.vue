@@ -1,16 +1,12 @@
 
 
 <template>
-   
-    <div>
-        <swiper :options="swiperOption" >
-            <swiper-slide v-for="slide in swiperSlides" class="banner">
+        <swiper :options="swiperOption" ref="mySwiper">
+            <swiper-slide v-for="slide in swiperSlides" class="banner" >
                 <img v-bind:src="slide.url" alt="">
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
-    </div>
-
 </template>
 
 
@@ -29,8 +25,15 @@ export default {
   data() {
     return {
       swiperOption: {
+        //delay,停留时间
+        autoplay: { delay: 2500,disableOnInteraction: false },
+        speed: 1000, //速度
+        loop: true, //循环
+        initialSlide: 1000,
+        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+        observeParents: false, //修改swiper的父元素时，自动初始化swiper
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
         }
       },
       swiperSlides: [
@@ -38,18 +41,11 @@ export default {
         { url: require("../assets/2.jpg"), name: "a" },
         { url: require("../assets/3.jpg"), name: "a" },
         { url: require("../assets/4.jpg"), name: "a" },
-        { url: require("../assets/3.jpg"), name: "a" }
+        { url: require("../assets/5.jpg"), name: "a" },
+        { url: require("../assets/6.jpg"), name: "a" },
+        { url: require("../assets/7.jpg"), name: "a" }
       ]
     };
-  },
-  // 轮播小点
-  mounted() {
-    setInterval(() => {
-      // console.log('simulate async data')
-      if (this.swiperSlides.length < 5) {
-        this.swiperSlides.push(this.swiperSlides.length + 1);
-      }
-    }, 3000);
   }
 };
 </script>

@@ -3,14 +3,14 @@
 <template>
   <div class="index">
     <!-- top start -->
-    <Top message="生活一家" />
+    <Top message="首页" />
     <!-- banner -->
     <Swiper/>
     <!-- contain start -->
     <main>
         <Gao/>
-        <Temai/>
-        <Pro/> 
+        <!-- <Temai/> -->
+        <!-- <Pro/>  -->
     </main>
     <!-- foot start -->
     <Fot/>
@@ -33,8 +33,6 @@ import Temai from "@/components/Temai";
 import Pro from "@/components/Product";
 // 底部导航
 import Fot from "@/components/Foot";
-// require styles
-import "swiper/dist/css/swiper.css";
 
 Vue.use(VueAwesomeSwiper);
 import { swiper, swiperSlide } from "vue-awesome-swiper";
@@ -43,29 +41,10 @@ export default {
   // 轮播图片
   data() {
     return {
-      swiperOption: {
-        pagination: {
-          el: ".swiper-pagination"
-        }
-      },
-      swiperSlides: [
-        { url: require("../assets/1.jpg"), name: "a" },
-        { url: require("../assets/2.jpg"), name: "a" },
-        { url: require("../assets/3.jpg"), name: "a" },
-        { url: require("../assets/4.jpg"), name: "a" },
-        { url: require("../assets/3.jpg"), name: "a" }
-      ]
+     
     };
   },
-  // 轮播小点
-  mounted() {
-    setInterval(() => {
-      // console.log('simulate async data')
-      if (this.swiperSlides.length < 5) {
-        this.swiperSlides.push(this.swiperSlides.length + 1);
-      }
-    }, 3000);
-  },
+
   // 定义子组件名称
   components: {
     Top: Top,
@@ -73,7 +52,7 @@ export default {
     Temai: Temai,
     Pro: Pro,
     Fot: Fot,
-    Swiper:Swiper
+    Swiper: Swiper
   }
 };
 </script>
@@ -105,4 +84,6 @@ a {
 main {
   margin-bottom: 20%;
 }
+
 </style>
+

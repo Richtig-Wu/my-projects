@@ -1,8 +1,11 @@
 <template>
     <div>
-      <Top message="分类"></Top>
-      <Sort></Sort>
-      <Fot></Fot>
+      <Top message="健康资讯"></Top>
+      <!-- <Sort/> -->
+      <!-- <div class="vip">
+        <Vip/>
+      </div> -->
+      <Fot/>
     </div>
 </template>
 
@@ -12,8 +15,10 @@
 import Top from "@/components/Top";
 // 底部导航
 import Fot from "@/components/Foot";
-// 分类内容
+// 分类过滤
 import Sort from "@/components/Sort";
+// 分类内容
+import Vip from "@/components/Vipmain";
 
 export default {
   data() {
@@ -22,11 +27,14 @@ export default {
   components: {
     Top: Top,
     Fot: Fot,
-    Sort:Sort
+    Sort: Sort,
+    Vip:Vip
   }
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.vip{
+  margin-top: 1%;
+}
 </style>

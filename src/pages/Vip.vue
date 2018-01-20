@@ -1,11 +1,11 @@
 <template>
     <div>
       <!-- top start -->
-      <Top message="会员杂锦" />  
+      <Top message="本院动态" />  
       <!-- banner -->
-      <Swiper/>
+      <!-- <Swiper/> -->
       <!-- contain start -->
-      <Main/>
+      <!-- <Main/> -->
       <!-- foot start -->
       <Fot/>
     </div>
